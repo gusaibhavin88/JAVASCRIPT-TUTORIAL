@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Live NodeList Example</title>
+  </head>
+  <body>
+    <ul id="myList">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+
+    <button id="addButton">Add Item</button>
+    <button id="removeButton">Remove Item</button>
+
+    <script>
+      // Select all <li> elements in the list
+      var listItems = document.querySelectorAll("#myList li");
+
+      // Display the initial number of list items
+      console.log("Initial Number of List Items: " + listItems.length);
+
+      // Function to add a new item to the list
+      document
+        .querySelector("#addButton")
+        .addEventListener("click", function () {
+          var listItems = document.querySelectorAll("#myList li");
+          var newItem = document.createElement("li");
+          newItem.textContent = "New Item " + (listItems.length + 1);
+          document.getElementById("myList").appendChild(newItem);
+          console.log("Added a new item to the list.");
+          console.log(listItems);
+        });
+
+      // Function to remove the last item from the list
+      document
+        .getElementById("removeButton")
+        .addEventListener("click", function () {
+          var newItem = document.createElement("li");
+          newItem.textContent = "New Item " + (listItems.length + 1);
+          document.getElementById("myList").appendChild(newItem);
+          console.log("Added a new item to the list.");
+          console.log(listItems);
+        });
+
+      // Display the current number of list items
+      console.log("Current Number of List Items: " + listItems.length);
+    </script>
+  </body>
+</html>
