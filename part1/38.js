@@ -1,12 +1,12 @@
-// how to iterate object 
+// how to iterate object
 const person = {
-    name: "harshit",
-    age: 22,
-    "person hobbies": ["guitar", "sleeping", "listening music"]
-}
+  name: "harshit",
+  age: 22,
+  "person hobbies": ["guitar", "sleeping", "listening music"],
+};
 
-// for in loop 
-// Object.keys 
+// for in loop
+// Object.keys
 
 // for(let key in person){
 //     // console.log(`${key} : ${person[key]}`);
@@ -20,3 +20,8 @@ const person = {
 // for(let key of Object.keys(person)){
 //     console.log(person[key]);
 // }
+
+for (let [key, value] of Object.entries(person)) {
+  console.log(key);
+  console.log(value);
+}
