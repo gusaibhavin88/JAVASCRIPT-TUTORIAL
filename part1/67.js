@@ -1,7 +1,7 @@
 // Sets (it is iterable)
-// store data  
+// store data
 // sets also have its own methods
-// No index-based access 
+// No index-based access
 // Order is not guaranteed
 // unique items only (no duplicates allowed)
 // const items = ['item1', 'item2', 'item3'];
@@ -29,3 +29,12 @@
 // }
 
 // console.log(length);
+
+const set = new Set([1, 2, 3]);
+const arr = Array.from(set);
+
+// or using spread operator:
+const arr2 = [...set];
+
+console.log(arr); // [1, 2, 3]
+console.log(arr2); // [1, 2, 3]

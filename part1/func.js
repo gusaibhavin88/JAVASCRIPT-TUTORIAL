@@ -2,14 +2,14 @@
 
 var x = 10;
 var y = 20;
-var codeToExecute = "x + y"; // This is a string containing JavaScript code.
-console.log(codeToExecute);
-var result = eval(codeToExecute);
-console.log(result); // This will output 30
+// var codeToExecute = "x + y"; // This is a string containing JavaScript code.
+// console.log(codeToExecute);
+// var result = eval(codeToExecute);
+// console.log(result); // This will output 30
 
 // isNan
 var result2 = isNaN(x);
-console.log(result2); // This will output 30
+console.log(result2); // false
 
 //isFinite
 
@@ -27,3 +27,6 @@ console.log(div(1));
 // Expected output: "Number is NOT Infinity."
 
 //
+
+console.log(0 / 0); // NaN
+console.log(Number("abc")); // NaN

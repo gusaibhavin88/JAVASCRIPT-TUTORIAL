@@ -16,3 +16,10 @@ const user2 = {
 about.apply(user1, ["guitar", "bach"]);
 // const func = about.bind(user2, "guitar", "bach");
 // func();
+
+function greet(greeting, punctuation) {
+  console.log(greeting + ", " + this.name + punctuation);
+}
+
+const person = { name: "Alice" };
+greet.call(person, "Hello", "!"); // Hello, Alice!
